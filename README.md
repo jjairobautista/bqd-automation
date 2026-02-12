@@ -102,15 +102,3 @@ La configuración principal está en `playwright.config.ts`:
 - **Navegadores**: Chromium, WebKit
 - **Reportes**: HTML con trazabilidad en fallos
 
-## CI/CD - GitHub Actions
-
-El proyecto incluye un workflow que ejecuta las pruebas en cada push o pull request a las ramas `main` y `master`:
-
-- Instala dependencias con `npm ci`
-- Instala los navegadores de Playwright
-- Ejecuta las pruebas
-- Sube el reporte HTML como artifact (retención 30 días)
-
-## Nota
-
-Para que las pruebas pasen correctamente en CI, la aplicación frontend debe estar desplegada y accesible. En GitHub Actions se usa `localhost:3000` por defecto; si necesitas apuntar a otra URL, considera usar variables de entorno o modificar el workflow.
